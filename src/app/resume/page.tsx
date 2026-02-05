@@ -1,7 +1,6 @@
 import Container from '@/components/common/Container';
 import { Separator } from '@/components/ui/separator';
 import { generateMetadata as getMetadata } from '@/config/Meta';
-import { resumeConfig } from '@/config/Resume';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -33,11 +32,8 @@ export default function ResumePage() {
           </p>
         </div>
         <Separator />
-        <div className="mx-auto max-w-2xl">
-          <iframe
-            src={resumeConfig.url}
-            className="min-h-screen w-full"
-          ></iframe>
+        <div className="mx-auto flex max-w-2xl items-center justify-center py-20">
+          <p className="text-muted-foreground text-lg">Coming Soon...</p>
         </div>
       </div>
     </Container>
