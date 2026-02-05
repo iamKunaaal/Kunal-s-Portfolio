@@ -1,5 +1,4 @@
-import Calender from '@/components/svgs/Calender';
-import { CertificateIcon } from '@phosphor-icons/react/dist/ssr';
+import { BookOpen, Film } from 'lucide-react';
 import React from 'react';
 
 export type JourneyItem = {
@@ -11,16 +10,16 @@ export type JourneyItem = {
 
 export const journeyItems: JourneyItem[] = [
   {
-    name: 'My Journey',
-    description: 'Overview of my learning and career journey.',
-    icon: Calender,
-    href: '/journey',
+    name: 'Books',
+    description: 'Books that have influenced my thinking and growth.',
+    icon: BookOpen,
+    href: '/books',
   },
   {
-    name: 'Certificates & Achievements',
-    description: 'A curated list of certificates and achievements.',
-    icon: CertificateIcon,
-    href: '/journey/certificates',
+    name: 'Movies',
+    description: 'Films that have inspired and entertained me.',
+    icon: Film,
+    href: '/movies',
   },
 ];
 

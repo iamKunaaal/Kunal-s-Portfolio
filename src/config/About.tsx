@@ -1,26 +1,37 @@
-import Bun from '@/components/technologies/Bun';
-import JavaScript from '@/components/technologies/JavaScript';
-import MongoDB from '@/components/technologies/MongoDB';
-import NextJs from '@/components/technologies/NextJs';
-import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
-import Prisma from '@/components/technologies/Prisma';
-import ReactIcon from '@/components/technologies/ReactIcon';
-import TypeScript from '@/components/technologies/TypeScript';
-
 export const mySkills = [
-  <ReactIcon key="react" />,
-  <Bun key="bun" />,
-  <JavaScript key="javascript" />,
-  <TypeScript key="typescript" />,
-  <MongoDB key="mongodb" />,
-  <NextJs key="nextjs" />,
-  <NodeJs key="nodejs" />,
-  <PostgreSQL key="postgresql" />,
-  <Prisma key="prisma" />,
+  {
+    key: 'python',
+    name: 'Python',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  },
+  {
+    key: 'django',
+    name: 'Django',
+    icon: 'https://cdn.simpleicons.org/django/FFFFFF',
+  },
+  {
+    key: 'mysql',
+    name: 'MySQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  },
+  {
+    key: 'shopify',
+    name: 'Shopify',
+    icon: 'https://cdn.simpleicons.org/shopify/7AB55C',
+  },
+  {
+    key: 'wordpress',
+    name: 'WordPress',
+    icon: 'https://cdn.simpleicons.org/wordpress/21759B',
+  },
+  {
+    key: 'webflow',
+    name: 'Webflow',
+    icon: 'https://cdn.simpleicons.org/webflow/4353FF',
+  },
 ];
 
 export const about = {
-  name: 'Ramkrishna Swarnkar',
-  description: `I'm a Full Stack web developer and Open Source Contributor, I love building products to solve real-world problems. I'm specialized in building MVP's.`,
+  name: 'Kunal Darji',
+  description: `I'm a Full Stack Developer who builds scalable web solutions and MVPs using clean, modern technologies. I also explore AI-powered tools to enhance user experiences and improve development workflows.`,
 };

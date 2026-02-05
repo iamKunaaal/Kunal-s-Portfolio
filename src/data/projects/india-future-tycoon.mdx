@@ -1,0 +1,148 @@
+---
+title: 'India Future Tycoon'
+description: 'AI-powered innovation idea management platform for student entrepreneurship competitions with automated evaluation, jury dashboards, and ranking systems.'
+image: '/projects/india-future-tycoon.png'
+technologies:
+  - Python
+  - Django 5.0
+  - SQLite
+  - OpenRouter API
+  - Claude 3.5 Sonnet
+  - JavaScript
+  - HTML5
+  - CSS3
+  - Bootstrap
+role: 'Full Stack Developer'
+timeline: 'Ongoing'
+team: 'Techinfinity'
+status: 'in-progress'
+github: '#'
+live: '#'
+featured: true
+isPublished: true
+---
+
+## ENpower: India Future Tycoon (IFT) Platform
+
+### Overview
+
+India Future Tycoon (IFT) is a comprehensive innovation idea management platform designed for the ENpower student entrepreneurship competition. It enables students to submit their innovative ideas, uses AI to generate neutral summaries and comprehensive evaluations, and provides jury members with a streamlined review interface.
+
+---
+
+## What Users Can Do
+
+### Student Portal
+- Register and create student profiles with school and grade information
+- Submit innovative ideas through a comprehensive 8-question form
+- Upload supporting materials (documents, images, videos up to 50MB)
+- Track submission status (Draft → Submitted → Evaluated → Reviewed)
+- View AI-generated summaries and evaluation scores for their submissions
+
+### AI-Powered Evaluation
+- Automatic generation of neutral 2-3 sentence idea summaries
+- **10-parameter evaluation scoring** (1-5 scale each, total 50 points):
+  - **Idea Parameters**: Uniqueness, Ease of Implementation, Scalability, Impact, Sustainability
+  - **Team Parameters**: Conceptual Clarity, Empathy, Creativity, Communication, Flexible Thinking
+- Coherence detection to flag inconsistent submissions
+- AI-suggested category tagging (EdTech, Sustainability, Health, FinTech, etc.)
+- Confidence level indicators for each evaluation
+
+### Jury/Admin Dashboard
+- View all submissions with AI summaries side-by-side
+- Filter submissions by category, status, or search terms
+- Detailed submission view with all questionnaire responses
+- One-click AI evaluation for individual submissions
+- Batch evaluation for processing multiple submissions
+- Real-time progress tracking during bulk operations
+- Export Top 400 qualified submissions to CSV
+
+### Rankings & Leaderboard
+- Dynamic ranking system based on evaluation scores
+- Top 400 qualification with minimum score threshold (≥34/50)
+- Tie-breaking logic using Uniqueness and Impact as secondary factors
+- Visual leaderboard with separate sections for Top 400 and Normal rankings
+
+---
+
+## Key Challenges
+
+| Challenge | Description |
+| :--- | :--- |
+| **Unstructured Idea Submissions** | Processing thousands of student innovation ideas with varying formats and quality levels |
+| **Manual Evaluation Burden** | Jury members spending excessive time reading through lengthy submissions without standardized summaries |
+| **Multi-Parameter Scoring** | Implementing a comprehensive 10-parameter evaluation rubric (Uniqueness, Scalability, Impact, etc.) |
+| **Coherence Detection** | Identifying incoherent submissions where problem statements and solutions don't align |
+| **Multimedia Content Analysis** | Extracting insights from uploaded documents, images, and videos alongside text responses |
+| **Fair & Unbiased Evaluation** | Ensuring AI assists but doesn't replace human judgment in the selection process |
+
+
+---
+
+## Technology Stack
+
+### Backend
+- **Django 5.0**: Web framework and ORM
+- **Python**: Backend logic and AI integration
+- **SQLite**: Development database
+- **OpenRouter API**: AI model gateway (Claude 3.5 Sonnet)
+
+### Document & Media Processing
+- **PyPDF2**: PDF text extraction
+- **python-docx**: Word document processing
+- **python-pptx**: PowerPoint text extraction
+- **OpenCV**: Video frame extraction
+- **Pillow**: Image processing
+
+### Frontend
+- **HTML5 & CSS3**: Structure and styling
+- **JavaScript**: Interactive features and AJAX calls
+- **Bootstrap**: Responsive UI components
+
+---
+
+## The 8-Question Submission Framework
+
+1. **Problem Definition** - Précised articulation of the problem being solved
+2. **Detailed Problem Description** - Comprehensive explanation of the challenge
+3. **Target User Group** - Description of who faces this problem
+4. **Problem Urgency** - Why this needs an urgent solution
+5. **Solution** - The proposed innovation
+6. **Solution Benefits** - How it reduces user pain or adds value
+7. **Why Best Equipped** - Why the student is suited to solve this
+8. **Idea Stage** - Current development stage (Idea → Prototype → Running Business)
+
+---
+
+## Impact & Results
+
+| Metric | Result |
+|--------|--------|
+| Submissions Processed | Thousands of student innovation ideas |
+| Evaluation Time Reduction | 60%+ reduction in manual review time |
+| Ranking Accuracy | Consistent 10-parameter scoring across all submissions |
+| Jury Efficiency | Side-by-side AI summaries enable faster decision-making |
+| Quality Control | Coherence detection flags problematic submissions automatically |
+
+---
+
+## AI Disclaimer
+
+**Important**: The AI in this platform is designed to assist, not replace human judgment.
+
+- AI generates neutral summaries and evaluation scores
+- All final decisions remain with human jury members
+- AI does NOT shortlist, approve, or reject any submissions
+- Clear disclaimers are displayed throughout the platform
+
+---
+
+## Future Plans
+
+- **Mobile Application**: Native apps for students and jury on-the-go access
+- **Advanced Analytics**: Business intelligence dashboard for competition insights
+- **Multi-Language Support**: Regional language support for pan-India participation
+- **Enhanced Vision AI**: Direct image/video analysis without text extraction
+- **Jury Collaboration**: Multi-jury scoring with consensus mechanisms
+- **API Integration**: REST APIs for external system connectivity
+

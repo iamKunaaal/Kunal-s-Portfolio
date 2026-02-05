@@ -6,6 +6,7 @@ import rehypeHighlight from '@shikijs/rehype';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
+import remarkGfm from 'remark-gfm';
 
 import Github from '../svgs/Github';
 import Website from '../svgs/Website';
@@ -210,6 +211,7 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           components={ProjectComponents}
           options={{
             mdxOptions: {
+              remarkPlugins: [remarkGfm],
               rehypePlugins: [
                 [
                   rehypeHighlight,

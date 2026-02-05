@@ -348,4 +348,26 @@ export const ProjectComponents = {
   ProjectMeta,
   Challenges,
   Learnings,
+
+  // Table styling
+  table: ({ children }: { children: React.ReactNode }) => (
+    <div className="my-6 w-full overflow-x-auto rounded-lg border">
+      <table className="w-full text-left text-sm">{children}</table>
+    </div>
+  ),
+  thead: ({ children }: { children: React.ReactNode }) => (
+    <thead className="bg-muted/50 border-b font-semibold">{children}</thead>
+  ),
+  tbody: ({ children }: { children: React.ReactNode }) => (
+    <tbody className="divide-y">{children}</tbody>
+  ),
+  tr: ({ children }: { children: React.ReactNode }) => (
+    <tr className="hover:bg-muted/20 transition-colors">{children}</tr>
+  ),
+  th: ({ children }: { children: React.ReactNode }) => (
+    <th className="p-4 font-semibold">{children}</th>
+  ),
+  td: ({ children }: { children: React.ReactNode }) => (
+    <td className="p-4">{children}</td>
+  ),
 };

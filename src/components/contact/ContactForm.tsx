@@ -26,6 +26,7 @@ import { toast } from 'sonner';
 import * as z from 'zod';
 
 import Chat from '../svgs/Chat';
+import CheckCircle from '../svgs/CheckCircle';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -56,6 +57,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -84,6 +86,7 @@ export default function ContactForm() {
       if (response.ok) {
         toast.success('Message sent successfully!');
         form.reset();
+        setIsSuccess(true);
       } else {
         toast.error(
           result.error || 'Failed to send message. Please try again.',
@@ -96,6 +99,26 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
+
+  if (isSuccess) {
+    return (
+      <Card className="border-none bg-transparent shadow-none">
+        <CardContent className="flex flex-col items-center justify-center py-12 text-center">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
+            <CheckCircle className="h-8 w-8 text-green-600 dark:text-green-400" />
+          </div>
+          <h3 className="mb-2 text-2xl font-bold">Message Sent!</h3>
+          <p className="text-muted-foreground mb-6 max-w-md">
+            Thank you for reaching out. I&apos;ll get back to you as soon as
+            possible.
+          </p>
+          <Button variant="outline" onClick={() => setIsSuccess(false)}>
+            Send Another Message
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="border-none bg-transparent shadow-none">

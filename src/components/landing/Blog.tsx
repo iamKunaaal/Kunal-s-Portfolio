@@ -1,27 +1,23 @@
-import { getPublishedBlogPosts } from '@/lib/blog';
-import { Link } from 'next-view-transitions';
+import Image from 'next/image';
 import React from 'react';
 
-import { BlogCard } from '../blog/BlogCard';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
-import { Button } from '../ui/button';
 
 export default function Blog() {
-  const posts = getPublishedBlogPosts();
-
   return (
-    <Container className="mt-20">
+    <Container className="mt-24">
       <SectionHeading subHeading="Featured" heading="Blogs" />
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {posts.slice(0, 2).map((post) => (
-          <BlogCard key={post.slug} post={post} />
-        ))}
-      </div>
-      <div className="mt-8 flex justify-center">
-        <Button variant="outline">
-          <Link href="/blog">Show all blogs</Link>
-        </Button>
+      <div className="mt-12 flex justify-center">
+        <div className="relative aspect-[3/1] w-full max-w-4xl overflow-hidden rounded-2xl border bg-[#F7E422] shadow-xl transition-all hover:shadow-2xl">
+          <Image
+            src="/banners/blog-coming-soon.png"
+            alt="Blogs Coming Soon"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
     </Container>
   );

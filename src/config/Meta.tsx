@@ -13,15 +13,15 @@ export interface PageMeta {
 export const siteConfig = {
   name: heroConfig.name,
   title: 'Sleek Portfolio',
-  description: 'Sleek Portfolio Template by @Ramxcodes',
+  description: 'Personal Portfolio of Kunal D',
   url: process.env.NEXT_PUBLIC_URL || 'http://localhost:3000',
   ogImage: '/meta/opengraph-image.png',
   author: {
     name: about.name,
-    twitter: '@ramxcodes',
-    github: 'ramxcodes',
-    linkedin: 'ramxcodes',
-    email: 'ramxcodes@gmail.com',
+    twitter: '@kunaldarji',
+    github: 'iamKunaaal',
+    linkedin: 'kunaal-darji',
+    email: 'kunaldarji2004@gmail.com',
   },
   keywords: [
     'portfolio',
@@ -176,6 +176,10 @@ export function generateMetadata(pathname: string) {
     keywords: pageMeta.keywords?.join(', '),
     authors: [{ name: siteConfig.author.name }],
     creator: siteConfig.author.name,
+    icons: {
+      icon: '/assets/logo.png',
+      apple: '/assets/logo.png',
+    },
     openGraph: {
       type: 'website',
       url: `${siteConfig.url}${pathname}`,
@@ -205,7 +209,7 @@ export function generateMetadata(pathname: string) {
         index: true,
         follow: true,
         'max-video-preview': -1,
-        'max-image-preview': 'large',
+        'max-image-preview': 'large' as const,
         'max-snippet': -1,
       },
     },

@@ -1,4 +1,4 @@
-import { heroConfig, skillComponents, socialLinks } from '@/config/Hero';
+import { heroConfig, socialLinks } from '@/config/Hero';
 import { parseTemplate } from '@/lib/hero';
 import { cn } from '@/lib/utils';
 import { Link } from 'next-view-transitions';
@@ -25,12 +25,13 @@ export default function Hero() {
 
     return parts.map((part) => {
       if (part.type === 'skill' && 'skill' in part && part.skill) {
-        const SkillComponent =
-          skillComponents[part.skill.component as keyof typeof skillComponents];
         return (
-          <Skill key={part.key} name={part.skill.name} href={part.skill.href}>
-            <SkillComponent />
-          </Skill>
+          <Skill
+            key={part.key}
+            name={part.skill.name}
+            href={part.skill.href}
+            icon={part.skill.icon}
+          />
         );
       } else if (part.type === 'bold' && 'text' in part) {
         return (
@@ -62,7 +63,7 @@ export default function Hero() {
 
       {/* Text Area */}
       <div className="mt-8 flex flex-col gap-2">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold whitespace-nowrap">
           Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
         </h1>
 

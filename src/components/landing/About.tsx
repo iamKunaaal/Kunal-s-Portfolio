@@ -23,15 +23,21 @@ export default function About() {
           <h3 className="text-2xl font-bold">{about.name}</h3>
           <p className="text-secondary mt-4">{about.description}</p>
           <p className="text-secondary mt-8 font-bold">Skills</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-3">
             {mySkills.map((skill) => (
               <Tooltip key={skill.key}>
                 <TooltipTrigger asChild>
-                  <div className="mt-4 size-6 hover:cursor-pointer">
-                    {skill}
+                  <div className="flex size-9 items-center justify-center rounded-lg bg-white/10 p-1.5 transition-all hover:cursor-pointer hover:bg-white/20">
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="h-full w-full object-contain"
+                    />
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>{skill.key}</TooltipContent>
+                <TooltipContent className="capitalize">
+                  {skill.name}
+                </TooltipContent>
               </Tooltip>
             ))}
           </div>

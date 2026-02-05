@@ -15,6 +15,8 @@ import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
 import { notFound } from 'next/navigation';
 
+export const dynamic = 'force-dynamic';
+
 interface ProjectCaseStudyPageProps {
   params: Promise<{
     slug: string;
