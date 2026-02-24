@@ -32,8 +32,21 @@ export default function ResumePage() {
           </p>
         </div>
         <Separator />
-        <div className="mx-auto flex max-w-2xl items-center justify-center py-20">
-          <p className="text-muted-foreground text-lg">Coming Soon...</p>
+        <div className="flex justify-center">
+          <a
+            href="/Kunal_Darji_Resume.pdf"
+            download="Kunal_Darji_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-md border border-dashed border-black/20 bg-black/5 px-4 py-2 text-sm font-semibold shadow transition-all hover:bg-black/10 dark:border-white/30 dark:bg-white/15 dark:text-white dark:hover:bg-white/20"
+          >
+            Download Resume
+          </a>
+        </div>
+        <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
+          <iframe
+            src="/Kunal_Darji_Resume.pdf"
+            className="h-[85vh] w-full"
+            title="Kunal Darji Resume"
+          />
         </div>
       </div>
     </Container>
